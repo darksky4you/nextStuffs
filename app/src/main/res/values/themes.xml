@@ -3,12 +3,11 @@
     <style name="Theme.Nextstuffs" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:windowTranslucentStatus">false</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-
+        <item name="android:windowBackground">@android:color/system_accent1_400</item>
     </style>
-    <!-- Base application theme. -->
+
     <style name="Base.Theme.Nextstuffs" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
     </style>
 
 </resources>

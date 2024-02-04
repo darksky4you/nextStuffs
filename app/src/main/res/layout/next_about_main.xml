@@ -18,6 +18,12 @@
 
         <include layout="@layout/contribution" />
 
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#9F9696"
+            android:text="@string/disclaimer_next"/>
     </LinearLayout>
+
 </ScrollView>

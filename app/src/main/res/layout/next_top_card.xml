@@ -39,13 +39,13 @@
             android:textFontWeight="800"
             android:fontFamily="@font/poppinsmedium"
             android:textSize="35sp"
-            android:text="@string/next_os"/>
+            android:text="NEXT OS "/>
         <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="400"
         android:fontFamily="@font/poppinslight"
         android:textSize="35sp"
-        android:text=" PARTICLE."/>
+        android:text="@string/project_codename_xd"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -155,7 +155,7 @@
             android:layout_width="250dp"
             android:layout_height="45dp">
             <TextView
-                android:text="NEXT OS MERLINx"
+                android:text="@string/support_name_xd"
                 android:textSize="18sp"
                 android:fontFamily="@font/poppinsregular"
                 android:layout_width="wrap_content"

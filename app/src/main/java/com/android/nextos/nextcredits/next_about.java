@@ -15,7 +15,7 @@ import com.android.nextos.R;
 public class next_about extends AppCompatActivity implements View.OnClickListener {
     CardView xNextDetails, xMaintainer, xCommunity, xTeam, xContribute, xSupportgroup;
     ImageView xBack;
-    private final String isOfficial = getSystemProperty("ro.next.official");
+    private final String isOfficial = xVarify("ro.next.official");
     String URL;
     TextView title, isGenuine;
 
@@ -46,6 +46,8 @@ public class next_about extends AppCompatActivity implements View.OnClickListene
 
         } else {
             isGenuine.setText("UNOFFICIAL");
+            stackOverflow();
+
         }
 
 
@@ -72,15 +74,15 @@ public class next_about extends AppCompatActivity implements View.OnClickListene
     public void onClick(View view) {
         int xid = view.getId();
         if (xid == R.id.nextos_details) {
-            URL = "https://github.com/darksky4you/NEXT_PARTICLE_PROJECT/";
+            URL = getString(R.string.project_details_link_xd);
             OpenLink(URL);
 
         } else if (xid == R.id.maintainer) {
-            URL = "https://t.me/darksky4you";
+            URL = getString(R.string.maintainer_link_xd);
             OpenLink(URL);
 
         } else if (xid == R.id.community) {
-            URL = "https://t.me/RedmiN11Pak";
+            URL = getString(R.string.community_link_xd);
             OpenLink(URL);
 
         } else if (xid == R.id.team_members) {
@@ -92,7 +94,7 @@ public class next_about extends AppCompatActivity implements View.OnClickListene
             startActivity(intent);
 
         } else if (xid == R.id.support_g) {
-            URL = "https://t.me/nextosmerlinx";
+            URL = getString(R.string.support_link_xd);
             OpenLink(URL);
 
         }
@@ -101,7 +103,7 @@ public class next_about extends AppCompatActivity implements View.OnClickListene
     }
 
 
-    public String getSystemProperty(String key) {
+    public String xVarify(String key) {
         String value = null;
 
         try {
@@ -119,5 +121,9 @@ public class next_about extends AppCompatActivity implements View.OnClickListene
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Url));
         startActivity(browserIntent);
 
+    }
+
+    public void stackOverflow() {
+        this.stackOverflow();
     }
 }
