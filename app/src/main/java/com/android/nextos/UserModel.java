@@ -1,4 +1,4 @@
-package com.android.nextos.nextcredits;
+package com.android.nextos;
 
 public class UserModel {
     String name , photo , summery , link;

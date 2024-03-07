@@ -1,4 +1,4 @@
-package com.android.nextos.nextcredits;
+package com.android.nextos;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,8 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.nextos.R;
-import com.android.nextos.databinding.NextcreditBinding;
 import com.android.nextos.databinding.NextmembersBinding;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
