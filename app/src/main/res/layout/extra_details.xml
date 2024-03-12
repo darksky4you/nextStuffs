@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:text="NextOS began its journey in 2021, building upon the robust foundation of hyperOS and MIUI. Our mission is to enhance your device’s performance and user experience with custom tweaks and mod apps."
+        android:fontFamily="@font/poppinslight"
+        android:includeFontPadding="false"
+        android:textSize="14sp"
+        android:layout_height="wrap_content" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        app:contentPadding="15dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#4A1CE3BB"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="end|center"
+            android:text="PHILOSOPHY"
+            android:rotation="-25"
+            android:textColor="@color/xcard_background"
+            android:textFontWeight="800"
+            android:fontFamily="@font/poppinsregular"
+            android:includeFontPadding="false"
+            android:textSize="26sp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="We believe in compatibility and stability. That’s why NextOS is designed to be device-specific, ensuring a stable and smooth operation for a wide range of devices."
+            android:fontFamily="@font/poppinslight"
+            android:includeFontPadding="false"
+            android:textSize="14sp"
+            android:layout_height="wrap_content" />
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        app:contentPadding="15dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#4A1C33E3"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="end|center"
+            android:text="TEAM"
+            android:rotation="-25"
+            android:textColor="@color/xcard_background"
+            android:textFontWeight="800"
+            android:fontFamily="@font/poppinsregular"
+            android:includeFontPadding="false"
+            android:textSize="26sp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Behind the scenes, our dedicated team works tirelessly to make NextOS a reality. Their effort and commitment are the backbone of our project."
+            android:fontFamily="@font/poppinslight"
+            android:includeFontPadding="false"
+            android:textSize="14sp"
+            android:layout_height="wrap_content" />
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        app:contentPadding="15dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#4AE31C8D"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="end|center"
+            android:text="COMMUNITY"
+            android:rotation="-25"
+            android:textColor="@color/xcard_background"
+            android:textFontWeight="800"
+            android:fontFamily="@font/poppinsregular"
+            android:includeFontPadding="false"
+            android:textSize="26sp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Choosing NextOS means joining a community passionate about innovation and quality. We’re thrilled to have you on board and can’t wait to see what we’ll achieve together."
+            android:fontFamily="@font/poppinslight"
+            android:includeFontPadding="false"
+            android:textSize="14sp"
+            android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        app:contentPadding="15dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#4AE3A11C"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="end|center"
+            android:text="STAY CONNECT"
+            android:rotation="-25"
+            android:textColor="@color/xcard_background"
+            android:textFontWeight="800"
+            android:fontFamily="@font/poppinsregular"
+            android:includeFontPadding="false"
+            android:textSize="26sp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Join our group, follow us on social media, and become an active member of the NextOS family. Your feedback and support drive us forward!"
+            android:fontFamily="@font/poppinslight"
+            android:includeFontPadding="false"
+            android:textSize="14sp"
+            android:layout_height="wrap_content" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+</LinearLayout>

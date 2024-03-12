@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 public class next_about extends AppCompatActivity implements View.OnClickListener {
-    CardView xNextDetails, xMaintainer, xCommunity, xTeam, xContribute, xSupportgroup;
+    CardView xNextDetails, xMaintainer, xCommunity, xTeam, xContribute, xSupportgroup , xGithubLink;
     ImageView xBack;
     private final String isOfficial = xVarify("ro.next.official");
     String URL;
@@ -28,6 +28,8 @@ public class next_about extends AppCompatActivity implements View.OnClickListene
         xTeam = findViewById(R.id.team_members);
         xContribute = findViewById(R.id.contributes);
         xSupportgroup = findViewById(R.id.support_g);
+        xGithubLink = findViewById(R.id.git_post);
+        xGithubLink.setOnClickListener(this);
 
         xBack.setOnClickListener(this);
         xNextDetails.setOnClickListener(this);
@@ -95,6 +97,12 @@ public class next_about extends AppCompatActivity implements View.OnClickListene
             URL = getString(R.string.support_link_xd);
             OpenLink(URL);
 
+
+
+        }
+        else if (xid == R.id.git_post ) {
+            URL = getString(R.string.project_details_link_xd);
+            OpenLink(URL);
         }
 
 
