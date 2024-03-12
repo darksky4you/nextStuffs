@@ -9,14 +9,12 @@
         android:layout_centerVertical="true"
         android:id="@+id/back_button"
         android:src="@drawable/backward_svgrepo_com" />
-
     <TextView
         android:id="@+id/topbar_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-       android:layout_centerInParent="true"
+        android:layout_centerInParent="true"
         android:fontFamily="@font/evolve_font"
-        android:text="SOMETHING"
         android:textSize="24sp" />
 
 </RelativeLayout>

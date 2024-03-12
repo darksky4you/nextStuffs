@@ -72,8 +72,8 @@ public class next_about extends AppCompatActivity implements View.OnClickListene
     public void onClick(View view) {
         int xid = view.getId();
         if (xid == R.id.nextos_details) {
-            URL = getString(R.string.project_details_link_xd);
-            OpenLink(URL);
+            Intent intent = new Intent(next_about.this, nextos_details.class);
+            startActivity(intent);
 
         } else if (xid == R.id.maintainer) {
             URL = getString(R.string.maintainer_link_xd);
