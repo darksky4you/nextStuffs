@@ -6,20 +6,13 @@
     android:id="@+id/nextos_details"
     android:clickable="true"
     android:focusable="true"
-    android:foreground="?attr/selectableItemBackground"
-    android:elevation="0dp"
-    app:cardBackgroundColor="@android:color/system_accent1_700"
+    app:cardElevation="0dp"
     android:layout_height="180dp">
-    <com.airbnb.lottie.LottieAnimationView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:lottie_rawRes="@raw/card_bg"
-        android:rotation="90"
-        android:alpha="0.2"
-        android:scaleX="2"
-        android:scaleY="2"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"/>
+        android:background="@drawable/widget_background_round"/>
+
     <TextView
         android:layout_gravity="end"
         android:layout_margin="20dp"

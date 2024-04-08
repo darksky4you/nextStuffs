@@ -14,11 +14,13 @@
         android:layout_marginEnd="3dp"
         android:layout_weight="1"
         android:layout_marginBottom="5dp"
-        android:elevation="0dp"
+        app:cardElevation="0dp"
+        
         app:cardBackgroundColor="@color/xcard_background"
         app:cardCornerRadius="20dp"
         android:layout_height="match_parent">
         <ImageView
+            android:alpha="0.5"
             android:layout_width="140dp"
             android:layout_height="140dp"
             android:layout_gravity="end|bottom"
@@ -50,7 +52,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/community"
         android:layout_weight="1"
-        android:elevation="0dp"
+        app:cardElevation="0dp"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?attr/selectableItemBackground"
@@ -61,6 +63,7 @@
         app:cardCornerRadius="20dp"
         android:layout_height="match_parent">
         <ImageView
+            android:alpha="0.5"
             android:layout_width="140dp"
             android:layout_height="140dp"
             android:layout_gravity="start|bottom"
@@ -76,6 +79,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="#COMMUNITY"/>
+        <TextView
+            android:layout_margin="17dp"
+            android:layout_gravity="bottom"
+            android:textSize="18sp"
+            android:textColor="#555252"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MAKE BONDS"/>
 
 
     </androidx.cardview.widget.CardView>

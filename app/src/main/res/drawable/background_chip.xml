@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <gradient
-        android:startColor="@color/chip_color"
-        android:endColor="@color/chip_color" />
+        android:startColor="#FFFFFFFF"
+        android:endColor="#FFFFFFFF" />
     <stroke
         android:width="0dp"
-        android:color="@color/chip_color" />
+        android:color="#FFFFFFFF" />
     <padding
         android:left="10dp"
         android:top="2dp"

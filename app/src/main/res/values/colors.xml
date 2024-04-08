@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="xcard_background">@android:color/system_accent2_10</color>
+    <color name="xcard_background">#fff3f4f6</color>
     <color name="xelement">#000000</color>
     <color name="chip_color">@android:color/system_accent1_400</color>
     <color name="window_bg">#FFFFFF</color>
+    <color name="shape_color">#272C2E</color>
 </resources>
