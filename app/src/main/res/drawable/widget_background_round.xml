@@ -10,7 +10,7 @@
     <item android:id="@android:id/background">
         <shape android:shape="rectangle">
             <corners android:radius="2dp"/>
-            <gradient android:startColor="#1E67C1" android:endColor="#2A79DC"/>
+            <gradient android:startColor="#2B568B" android:endColor="#0A3E66"/>
         </shape>
     </item>
 </ripple>

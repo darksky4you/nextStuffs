@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="400"
         android:fontFamily="@font/poppinslight"
-        android:textSize="35sp"
+        android:textSize="40sp"
         android:text="@string/project_codename_xd"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
