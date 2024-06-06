@@ -8,17 +8,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nextstuffs">
         <activity
-            android:name=".nextos_details"
+            android:name=".NextSponsorsActivity"
             android:exported="false"
             android:theme="@style/Theme.Nextstuffs" />
         <activity
-            android:name=".nextmembers"
+            android:name=".NextDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Nextstuffs" />
+        <activity
+            android:name=".NextMembersActivity"
             android:exported="true" />
         <activity
-            android:name=".nextcredit"
+            android:name=".NextCreditActivity"
             android:exported="true" />
         <activity
-            android:name=".next_about"
+            android:name=".NextAboutActivity"
             android:exported="true" />
     </application>
 

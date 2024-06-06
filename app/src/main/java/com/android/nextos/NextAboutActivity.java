@@ -10,10 +10,16 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-public class next_about extends AppCompatActivity implements View.OnClickListener {
-    CardView xNextDetails, xMaintainer, xCommunity, xTeam, xContribute, xSupportgroup , xGithubLink;
-    ImageView xBack;
+public class NextAboutActivity extends AppCompatActivity implements View.OnClickListener {
+
+    public static String ServerLink = "https://raw.githubusercontent.com/Fazokhan/NEXTOS_PROJECT/main/database/";
+
+    public static String BUILD = xVarify("ro.nextos.build");
+
+
     private final String isOfficial = xVarify("ro.next.official");
+    CardView xNextDetails, xMaintainer, xCommunity, xTeam, xContribute, xSupportgroup, xGithubLink, xSponsors;
+    ImageView xBack;
     String URL;
     TextView title, isGenuine;
 
@@ -28,9 +34,11 @@ public class next_about extends AppCompatActivity implements View.OnClickListene
         xTeam = findViewById(R.id.team_members);
         xContribute = findViewById(R.id.contributes);
         xSupportgroup = findViewById(R.id.support_g);
+        xSponsors = findViewById(R.id.sponsers);
+
         xGithubLink = findViewById(R.id.git_post);
         xGithubLink.setOnClickListener(this);
-
+        xSponsors.setOnClickListener(this);
         xBack.setOnClickListener(this);
         xNextDetails.setOnClickListener(this);
         xMaintainer.setOnClickListener(this);
@@ -74,7 +82,7 @@ public class next_about extends AppCompatActivity implements View.OnClickListene
     public void onClick(View view) {
         int xid = view.getId();
         if (xid == R.id.nextos_details) {
-            Intent intent = new Intent(next_about.this, nextos_details.class);
+            Intent intent = new Intent(NextAboutActivity.this, NextDetailsActivity.class);
             startActivity(intent);
 
         } else if (xid == R.id.maintainer) {
@@ -86,21 +94,23 @@ public class next_about extends AppCompatActivity implements View.OnClickListene
             OpenLink(URL);
 
         } else if (xid == R.id.team_members) {
-            Intent intent = new Intent(next_about.this, nextmembers.class);
+            Intent intent = new Intent(NextAboutActivity.this, NextMembersActivity.class);
             startActivity(intent);
 
         } else if (xid == R.id.contributes) {
-            Intent intent = new Intent(next_about.this, nextcredit.class);
+            Intent intent = new Intent(NextAboutActivity.this, NextCreditActivity.class);
             startActivity(intent);
+        } else if (xid == R.id.sponsers) {
+            Intent intent = new Intent(NextAboutActivity.this, NextSponsorsActivity.class);
+            startActivity(intent);
+
 
         } else if (xid == R.id.support_g) {
             URL = getString(R.string.support_link_xd);
             OpenLink(URL);
 
 
-
-        }
-        else if (xid == R.id.git_post ) {
+        } else if (xid == R.id.git_post) {
             URL = getString(R.string.project_details_link_xd);
             OpenLink(URL);
         }
@@ -109,7 +119,7 @@ public class next_about extends AppCompatActivity implements View.OnClickListene
     }
 
 
-    public String xVarify(String key) {
+    public static String  xVarify(String key) {
         String value = null;
 
         try {

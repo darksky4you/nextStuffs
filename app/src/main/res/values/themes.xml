@@ -3,7 +3,7 @@
     <style name="Theme.Nextstuffs" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:windowTranslucentStatus">false</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowBackground">#cef2f0</item>
     </style>
 
     <style name="Base.Theme.Nextstuffs" parent="Theme.Material3.DayNight.NoActionBar">

@@ -21,9 +21,9 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class nextcredit extends AppCompatActivity {
+public class NextSponsorsActivity extends AppCompatActivity {
     NextcreditBinding binding;
-    String url = "https://raw.githubusercontent.com/darksky4you/NEXT_PARTICLE_PROJECT/main/DATABASE/project_credits.json";
+    String url = NextAboutActivity.ServerLink+"sponsors.json";
 
     ArrayList<UserModel> userModelArrayList = new ArrayList<>();
     StringRequest request = new StringRequest(url, new Response.Listener<String>() {
@@ -31,7 +31,7 @@ public class nextcredit extends AppCompatActivity {
         public void onResponse(String response) {
             try {
                 JSONObject jsonObject = new JSONObject(response);
-                JSONArray jsonArray = jsonObject.getJSONArray("credits");
+                JSONArray jsonArray = jsonObject.getJSONArray("sponsors");
                 for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject singleObject = jsonArray.getJSONObject(i);
                     String name = singleObject.getString("name");
@@ -42,8 +42,8 @@ public class nextcredit extends AppCompatActivity {
                     userModelArrayList.add(userModel);
 
                 }
-                UserAdapter userAdapter = new UserAdapter(userModelArrayList, nextcredit.this);
-                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(nextcredit.this);
+                UserAdapter userAdapter = new UserAdapter(userModelArrayList, NextSponsorsActivity.this);
+                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(NextSponsorsActivity.this);
                 binding.nextCredit.setLayoutManager(linearLayoutManager);
                 binding.nextCredit.setAdapter(userAdapter);
 
@@ -52,7 +52,7 @@ public class nextcredit extends AppCompatActivity {
             }
         }
 
-    }, error -> Toast.makeText(nextcredit.this, "CHECK INTERNET", Toast.LENGTH_LONG).show());
+    }, error -> Toast.makeText(NextSponsorsActivity.this, "CHECK INTERNET", Toast.LENGTH_LONG).show());
 
 
     @Override
@@ -61,7 +61,7 @@ public class nextcredit extends AppCompatActivity {
         binding = NextcreditBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         TextView title = findViewById(R.id.topbar_title);
-        title.setText(R.string.credit_s);
+        title.setText(R.string.sponsors);
         RequestQueue queue = Volley.newRequestQueue(this);
         queue.add(request);
         ImageView xBack = findViewById(R.id.back_button);
