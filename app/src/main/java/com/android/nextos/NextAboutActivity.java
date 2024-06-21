@@ -47,18 +47,7 @@ public class NextAboutActivity extends AppCompatActivity implements View.OnClick
         xContribute.setOnClickListener(this);
         xSupportgroup.setOnClickListener(this);
         isGenuine = findViewById(R.id.build_status);
-
-        if (isOfficial.equals("true")) {
-            isGenuine.setText("OFFICIAL");
-
-
-        } else {
-            isGenuine.setText("UNOFFICIAL");
-            stackOverflow();
-
-        }
-
-
+        SetStatus();
         title = findViewById(R.id.topbar_title);
         title.setText("About Project");
 
@@ -70,6 +59,20 @@ public class NextAboutActivity extends AppCompatActivity implements View.OnClick
 
             }
         });
+    }
+
+    void SetStatus(){
+        if (isOfficial.equals("true")) {
+            isGenuine.setText("OFFICIAL");
+
+
+        } else if (isOfficial.equals("port")) {
+            isGenuine.setText("PORT BUILD");
+
+        } else {
+            isGenuine.setText("UNOFFICIAL");
+
+        }
     }
 
 
