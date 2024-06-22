@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 public class NextAboutActivity extends AppCompatActivity implements View.OnClickListener {
-
     public static String ServerLink = "https://raw.githubusercontent.com/Fazokhan/NEXTOS_PROJECT/main/database/";
 
     public static String BUILD = xVarify("ro.nextos.build");
@@ -21,7 +20,7 @@ public class NextAboutActivity extends AppCompatActivity implements View.OnClick
     CardView xNextDetails, xMaintainer, xCommunity, xTeam, xContribute, xSupportgroup, xGithubLink, xSponsors;
     ImageView xBack;
     String URL;
-    TextView title, isGenuine;
+    TextView title, isGenuine , CodenameText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +49,8 @@ public class NextAboutActivity extends AppCompatActivity implements View.OnClick
         SetStatus();
         title = findViewById(R.id.topbar_title);
         title.setText("About Project");
+        CodenameText = findViewById(R.id.codename_text);
+        CodenameText.setText(BUILD.toUpperCase());
 
 
         xBack.setOnClickListener(new View.OnClickListener() {
@@ -114,7 +115,7 @@ public class NextAboutActivity extends AppCompatActivity implements View.OnClick
 
 
         } else if (xid == R.id.git_post) {
-            URL = getString(R.string.project_details_link_xd);
+            URL = getString(R.string.project_details_link_xd)+BUILD;
             OpenLink(URL);
         }
 
@@ -142,7 +143,4 @@ public class NextAboutActivity extends AppCompatActivity implements View.OnClick
 
     }
 
-    public void stackOverflow() {
-        this.stackOverflow();
-    }
 }

@@ -9,16 +9,11 @@
     app:cardBackgroundColor="@color/xcard_background"
     app:cardElevation="0dp"
     android:layout_height="180dp">
-<com.airbnb.lottie.LottieAnimationView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:lottie_rawRes="@raw/nextos_background"
-    android:rotation="90"
-    android:scaleX="2"
-    app:lottie_loop="true"
-    app:lottie_autoPlay="true"
-    app:lottie_repeatMode="reverse"
-    android:scaleY="3"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/top_bg_image"
+        android:scaleType="centerCrop"/>
 
     <TextView
         android:layout_gravity="end"
@@ -37,18 +32,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/xelement"
+            android:textColor="#FFF"
             android:textFontWeight="800"
             android:fontFamily="@font/poppinsmedium"
             android:textSize="35sp"
             android:text="NEXT OS "/>
         <TextView
+            android:id="@+id/codename_text"
         android:layout_width="0dp"
-            android:textColor="@color/xelement"
+            android:textColor="#FFF"
         android:layout_height="wrap_content"
         android:layout_weight="400"
         android:fontFamily="@font/poppinslight"
-        android:textSize="35sp"
-        android:text="@string/project_codename_xd"/>
+        android:textSize="35sp"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

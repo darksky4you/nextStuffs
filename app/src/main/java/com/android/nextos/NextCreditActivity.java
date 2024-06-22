@@ -26,7 +26,7 @@ public class NextCreditActivity extends AppCompatActivity {
     String url = NextAboutActivity.ServerLink+NextAboutActivity.BUILD+"/json/contributers.json";
 
     ArrayList<UserModel> userModelArrayList = new ArrayList<>();
-    StringRequest request = new StringRequest(url, new Response.Listener<String>() {
+    StringRequest request = new StringRequest(url.replace("main" , NextAboutActivity.BUILD), new Response.Listener<String>() {
         @Override
         public void onResponse(String response) {
             try {

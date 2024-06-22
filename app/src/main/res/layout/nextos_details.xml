@@ -11,8 +11,10 @@
         <include layout="@layout/next_topbar2" />
         <ImageView
             android:layout_gravity="center"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:tint="@android:color/system_accent1_400"
+            android:layout_marginBottom="20dp"
             android:src="@drawable/nextos_logo"/>
         <TextView
             android:layout_width="wrap_content"

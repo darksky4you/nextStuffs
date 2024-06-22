@@ -6,12 +6,11 @@
     <string name="members_s">MEMBER\'S</string>
     <string name="credit_s">CREDIT\'S</string>
     <string name="maintainer_link_xd">https://t.me/Fazokhan</string>
-    <string name="project_codename_xd">QUANTUM</string>
     <string name="maintainer_name_xd">FAZO KHAN</string>
     <string name="community_link_xd">https://t.me/RedmiN11Pak</string>
     <string name="support_link_xd">https://t.me/RN11PakCommunity</string>
     <string name="support_name_xd">NEXT OS | SUPPORT</string>
-    <string name="project_details_link_xd">https://github.com/Fazokhan/NEXTOS_PROJECT/tree/quantum</string>
+    <string name="project_details_link_xd">https://github.com/Fazokhan/NEXTOS_PROJECT/tree/</string>
     <string name="maintainer">Maintainer</string>
     <string name="community_name_xd">NEXT COMMUNITY</string>
     <string name="details">Details</string>
