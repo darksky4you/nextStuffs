@@ -14,7 +14,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:fontFamily="@font/evolve_font"
         android:textSize="24sp" />
 
 </RelativeLayout>

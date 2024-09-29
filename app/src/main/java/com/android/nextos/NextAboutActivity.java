@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -103,6 +104,19 @@ public class NextAboutActivity extends AppCompatActivity implements View.OnClick
             xGithubLink.setVisibility(View.GONE);
         }
         updateMaintainerStatus();
+        isGenuine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (IS_OFFICIAL){
+                    Toast.makeText(NextAboutActivity.this, "This Device is Officially Supported by NEXT-OS", Toast.LENGTH_LONG).show();
+
+                }
+                else {
+                    Toast.makeText(NextAboutActivity.this, "The Rom is Ported for this Device", Toast.LENGTH_LONG).show();
+
+                }
+            }
+        });
     }
 
     // Setup the title and codename with a fallback
