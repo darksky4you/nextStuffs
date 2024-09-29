@@ -6,4 +6,5 @@
     <color name="chip_color">@android:color/system_accent1_400</color>
     <color name="window_bg">#FFFFFF</color>
     <color name="shape_color">#272C2E</color>
+    <color name="nextos_icon_background">@android:color/system_accent1_50</color>
 </resources>

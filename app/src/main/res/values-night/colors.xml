@@ -2,4 +2,6 @@
 <resources>
     <color name="xcard_background">#ff131313</color>
     <color name="xelement">#FFFFFF</color>
+
+    <color name="nextos_icon_background">#C4303E45</color>
 </resources>

@@ -15,12 +15,11 @@
         android:layout_weight="1"
         android:layout_marginBottom="5dp"
         app:cardElevation="0dp"
-        
         app:cardBackgroundColor="@color/xcard_background"
         app:cardCornerRadius="20dp"
         android:layout_height="match_parent">
-
         <TextView
+            android:id="@+id/DevStatus"
             android:layout_margin="17dp"
             android:textSize="18sp"
             android:fontFamily="@font/poppinsmedium"
@@ -28,6 +27,7 @@
             android:layout_height="wrap_content"
             android:text="#MAINTAINER"/>
         <TextView
+            android:id="@+id/DevName"
             android:layout_margin="17dp"
             android:layout_gravity="bottom"
             android:textSize="18sp"
@@ -68,7 +68,7 @@
             android:fontFamily="@font/poppinsmedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MAKE BONDS"/>
+            android:text="HYPER NEXTOS "/>
 
 
     </androidx.cardview.widget.CardView>

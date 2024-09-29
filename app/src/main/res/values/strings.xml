@@ -20,6 +20,8 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="disclaimer_next">This project is built with love. We respect all devs who are giving their precious time to this community. We are trying to give our best. Keep supporting our work, so we can do better.</string>
-
     <string name="sponsors">SPONSORS</string>
+    <string name="status_official">OFFICIAL</string>
+    <string name="status_unofficial">UNOFFICIAL</string>
+    <string name="about_project_title">About NextOS</string>
 </resources>

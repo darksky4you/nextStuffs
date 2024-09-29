@@ -23,10 +23,10 @@ import java.util.ArrayList;
 
 public class NextCreditActivity extends AppCompatActivity {
     NextcreditBinding binding;
-    String url = NextAboutActivity.ServerLink+NextAboutActivity.BUILD+"/json/contributers.json";
+    String url = NextAboutActivity.SERVER_LINK+NextAboutActivity.NEXTOS_CODENAME+"/json/contributers.json";
 
     ArrayList<UserModel> userModelArrayList = new ArrayList<>();
-    StringRequest request = new StringRequest(url.replace("main" , NextAboutActivity.BUILD), new Response.Listener<String>() {
+    StringRequest request = new StringRequest(url.replace("main" , NextAboutActivity.NEXTOS_CODENAME), new Response.Listener<String>() {
         @Override
         public void onResponse(String response) {
             try {

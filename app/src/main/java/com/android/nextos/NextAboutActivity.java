@@ -5,28 +5,39 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 public class NextAboutActivity extends AppCompatActivity implements View.OnClickListener {
-    public static String ServerLink = "https://raw.githubusercontent.com/Fazokhan/NEXTOS_PROJECT/main/database/";
-
-    public static String BUILD = xVarify("ro.nextos.build");
-
-
-    private final String isOfficial = xVarify("ro.next.official");
-    CardView xNextDetails, xMaintainer, xCommunity, xTeam, xContribute, xSupportgroup, xGithubLink, xSponsors;
-    ImageView xBack;
-    String URL;
-    TextView title, isGenuine , CodenameText;
+    public static final String SERVER_LINK = "https://raw.githubusercontent.com/Fazokhan/NEXTOS_PROJECT/main/database/";
+    public static final String NEXTOS_CODENAME = getPropValue("ro.nextos.codename");
+    private CardView xNextDetails, xMaintainer, xCommunity, xTeam, xContribute, xSupportgroup, xGithubLink, xSponsors;
+    private ImageView xBack;
+    private TextView title, isGenuine, codenameText, DevName, DevStatus, supportGroupName;
+    private String CommunityLink = "https://t.me/";
+    private String mUserName, mSuUserName;
+    public static Boolean IS_OFFICIAL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.next_about_main);
+        initializeViews();
+        setClickListeners();
+        updateBuildType();
+        setUpTitleAndCodename();
+        configurePort();
+    }
+
+    // Initialize views with better grouping for readability
+    private void initializeViews() {
+        // ImageView
         xBack = findViewById(R.id.back_button);
+
+        // CardViews
         xNextDetails = findViewById(R.id.nextos_details);
         xMaintainer = findViewById(R.id.maintainer);
         xCommunity = findViewById(R.id.community);
@@ -34,113 +45,128 @@ public class NextAboutActivity extends AppCompatActivity implements View.OnClick
         xContribute = findViewById(R.id.contributes);
         xSupportgroup = findViewById(R.id.support_g);
         xSponsors = findViewById(R.id.sponsers);
-
         xGithubLink = findViewById(R.id.git_post);
-        xGithubLink.setOnClickListener(this);
-        xSponsors.setOnClickListener(this);
-        xBack.setOnClickListener(this);
-        xNextDetails.setOnClickListener(this);
-        xMaintainer.setOnClickListener(this);
-        xCommunity.setOnClickListener(this);
-        xTeam.setOnClickListener(this);
-        xContribute.setOnClickListener(this);
-        xSupportgroup.setOnClickListener(this);
+
+        // TextViews
         isGenuine = findViewById(R.id.build_status);
-        SetStatus();
         title = findViewById(R.id.topbar_title);
-        title.setText("About Project");
-        CodenameText = findViewById(R.id.codename_text);
-        CodenameText.setText(BUILD.toUpperCase());
-
-
-        xBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-
-            }
-        });
+        codenameText = findViewById(R.id.codename_text);
+        DevName = findViewById(R.id.DevName);
+        DevStatus = findViewById(R.id.DevStatus);
+        supportGroupName = findViewById(R.id.supportGroupName);
     }
 
-    void SetStatus(){
-        if (isOfficial.equals("true")) {
-            isGenuine.setText("OFFICIAL");
-
-
-        } else if (isOfficial.equals("port")) {
-            isGenuine.setText("PORT BUILD");
-
-        } else {
-            isGenuine.setText("UNOFFICIAL");
-
+    private void setClickListeners() {
+        // Attach click listeners in a concise manner
+        View[] clickableViews = {xBack, xNextDetails, xMaintainer, xCommunity, xTeam, xContribute, xSupportgroup, xSponsors, xGithubLink};
+        for (View view : clickableViews) {
+            view.setOnClickListener(this);
         }
     }
 
+    // Check if the build is official by comparing the codename to the supported list
+    private void updateBuildType() {
+        String deviceCodename = getPropValue("ro.product.vendor.name");
+        String[] supportedDevices = getResources().getStringArray(R.array.official_supported_devices);
 
-    public void onBackPressed() {
-        super.onBackPressed();
+        IS_OFFICIAL = false;
+        for (String supportedDevice : supportedDevices) {
+            if (supportedDevice.equals(deviceCodename)) {
+                IS_OFFICIAL = true;
+                break;
+            }
+        }
     }
 
+    // Update maintainer and support group details
+    private void updateMaintainerStatus() {
+        String maintainerTitle = getPropValue("ro.nextos.maintainer.title");
+        mUserName = getPropValue("ro.nextos.maintainer.username");
+
+        String supportTitle = getPropValue("ro.nextos.support.title");
+        mSuUserName = getPropValue("ro.nextos.support.username");
+
+        // Ensure non-null values to avoid runtime issues
+        DevName.setText(maintainerTitle != null ? maintainerTitle : "Unknown Maintainer");
+        supportGroupName.setText(supportTitle != null ? supportTitle : "Unknown Support");
+    }
+
+    // Configure the port or official status dynamically
+    private void configurePort() {
+        if (IS_OFFICIAL) {
+            isGenuine.setText(R.string.status_official);  // Official build
+            DevStatus.setText("#MAINTAINER");
+            xGithubLink.setVisibility(View.VISIBLE);
+        } else {
+            isGenuine.setText(R.string.status_unofficial);  // Unofficial port
+            DevStatus.setText("#PORTER");
+            xGithubLink.setVisibility(View.GONE);
+        }
+        updateMaintainerStatus();
+    }
+
+    // Setup the title and codename with a fallback
+    private void setUpTitleAndCodename() {
+        title.setText(R.string.about_project_title);  // Set the title
+        codenameText.setText(NEXTOS_CODENAME != null ? NEXTOS_CODENAME.toUpperCase() : "UNKNOWN");
+    }
 
     @Override
     public void onClick(View view) {
-        int xid = view.getId();
-        if (xid == R.id.nextos_details) {
-            Intent intent = new Intent(NextAboutActivity.this, NextDetailsActivity.class);
-            startActivity(intent);
+        int viewId = view.getId();
 
-        } else if (xid == R.id.maintainer) {
-            URL = getString(R.string.maintainer_link_xd);
-            OpenLink(URL);
-
-        } else if (xid == R.id.community) {
-            URL = getString(R.string.community_link_xd);
-            OpenLink(URL);
-
-        } else if (xid == R.id.team_members) {
-            Intent intent = new Intent(NextAboutActivity.this, NextMembersActivity.class);
-            startActivity(intent);
-
-        } else if (xid == R.id.contributes) {
-            Intent intent = new Intent(NextAboutActivity.this, NextCreditActivity.class);
-            startActivity(intent);
-        } else if (xid == R.id.sponsers) {
-            Intent intent = new Intent(NextAboutActivity.this, NextSponsorsActivity.class);
-            startActivity(intent);
-
-
-        } else if (xid == R.id.support_g) {
-            URL = getString(R.string.support_link_xd);
-            OpenLink(URL);
-
-
-        } else if (xid == R.id.git_post) {
-            URL = getString(R.string.project_details_link_xd)+BUILD;
-            OpenLink(URL);
+        if (viewId == R.id.back_button) {
+            onBackPressed();
+        } else if (viewId == R.id.nextos_details) {
+            openActivity(NextDetailsActivity.class);
+        } else if (viewId == R.id.maintainer) {
+            openLink(CommunityLink + mUserName);
+        } else if (viewId == R.id.community) {
+            openLink(R.string.community_link_xd);
+        } else if (viewId == R.id.team_members) {
+            openActivity(NextMembersActivity.class);
+        } else if (viewId == R.id.contributes) {
+            openActivity(NextCreditActivity.class);
+        } else if (viewId == R.id.sponsers) {
+            openActivity(NextSponsorsActivity.class);
+        } else if (viewId == R.id.support_g) {
+            openLink(CommunityLink + mSuUserName);
+        } else if (viewId == R.id.git_post) {
+            openLink(getString(R.string.project_details_link_xd) + NEXTOS_CODENAME);
         }
-
-
     }
 
 
-    public static String  xVarify(String key) {
-        String value = null;
+    // Helper method to start a new activity
+    private void openActivity(Class<?> activityClass) {
+        startActivity(new Intent(NextAboutActivity.this, activityClass));
+    }
 
+    // Helper method to open a URL via an intent
+    private void openLink(int urlResourceId) {
+        String url = getString(urlResourceId);
+        openLink(url);
+    }
+
+    private void openLink(String url) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(browserIntent);
+    }
+
+    // Fetch system property value safely with fallback
+    public static String getPropValue(String key) {
         try {
-            value = (String) Class.forName("android.os.SystemProperties")
-                    .getMethod("get", String.class).invoke(null, key);
+            return (String) Class.forName("android.os.SystemProperties")
+                    .getMethod("get", String.class)
+                    .invoke(null, key);
         } catch (Exception e) {
             e.printStackTrace();
+            return "Unknown";  // Return a safe fallback value
         }
-
-        return value;
     }
 
-
-    void OpenLink(String Url) {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Url));
-        startActivity(browserIntent);
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();  // Default back press behavior
     }
-
 }

@@ -1,12 +1,27 @@
 <resources>
-    <!-- Reply Preference -->
-    <string-array name="reply_entries">
-        <item>Reply</item>
-        <item>Reply to all</item>
+    <string-array name="integrity_signature_array">
+            <item>Google</item> <!-- MANUFACTURER -->
+            <item>Pixel 9</item> <!-- MODEL -->
+            <item>google/tokay_beta/tokay:15/AP41.240823.009/12329489:user/release-keys</item> <!-- FINGERPRINT -->
+            <item>google</item> <!-- BRAND -->
+            <item>tokay_beta</item> <!-- PRODUCT -->
+            <item>tokay</item> <!-- DEVICE -->
+            <item>15</item> <!-- Android version (RELEASE) -->
+            <item>AP41.240823.009</item> <!-- ID (Build ID) -->
+            <item>12329489</item> <!-- INCREMENTAL -->
+            <item>user</item> <!-- TYPE -->
+            <item>release-keys</item> <!-- TAGS -->
+            <item>2024-09-05</item> <!-- SECURITY_PATCH -->
+            <item>35</item> <!-- DEVICE_INITIAL_SDK_INT (Assumed SDK level, you can update this if needed) -->
     </string-array>
+        <string-array name="official_supported_devices">
+                <item>spes</item>
+                <item>spesn</item>
+                <item>excalibur</item>
+                <item>curtana</item>
+                <item>joyeuse</item>
+                <item>alioth</item>
+                <item>fog</item>
+        </string-array>
 
-    <string-array name="reply_values">
-        <item>reply</item>
-        <item>reply_all</item>
-    </string-array>
 </resources>

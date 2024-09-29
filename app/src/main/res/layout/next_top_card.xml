@@ -9,12 +9,16 @@
     app:cardBackgroundColor="@color/xcard_background"
     app:cardElevation="0dp"
     android:layout_height="180dp">
-    <ImageView
+    <LinearLayout
+        android:background="@android:color/system_accent1_400"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/top_bg_image"
-        android:scaleType="centerCrop"/>
-
+        android:alpha="0.90"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:background="@android:color/black"
+        android:layout_width="match_parent"
+        android:alpha="0.30"
+        android:layout_height="match_parent"/>
     <TextView
         android:layout_gravity="end"
         android:layout_margin="20dp"

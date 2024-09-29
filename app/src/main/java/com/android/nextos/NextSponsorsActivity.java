@@ -23,7 +23,7 @@ import java.util.ArrayList;
 
 public class NextSponsorsActivity extends AppCompatActivity {
     NextcreditBinding binding;
-    String url = NextAboutActivity.ServerLink+"sponsors.json";
+    String url = NextAboutActivity.SERVER_LINK+"sponsors.json";
 
     ArrayList<UserModel> userModelArrayList = new ArrayList<>();
     StringRequest request = new StringRequest(url, new Response.Listener<String>() {

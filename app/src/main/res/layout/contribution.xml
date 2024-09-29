@@ -29,11 +29,14 @@
             android:layout_width="45dp"
             android:layout_gravity="start|center"
             app:cardCornerRadius="70dp"
+            app:cardBackgroundColor="@color/nextos_icon_background"
+            app:cardElevation="0dp"
             android:layout_marginStart="@dimen/card_margin"
             android:layout_height="45dp">
             <ImageView
-                android:src="@drawable/boy"
+                android:src="@drawable/ic_members"
                 android:layout_width="match_parent"
+                android:layout_margin="10dp"
                 android:layout_height="match_parent" />
         </androidx.cardview.widget.CardView>
         <LinearLayout
@@ -79,11 +82,14 @@
             android:layout_width="45dp"
             android:layout_gravity="start|center"
             app:cardCornerRadius="70dp"
+            app:cardBackgroundColor="@color/nextos_icon_background"
+            app:cardElevation="0dp"
             android:layout_marginStart="@dimen/card_margin"
             android:layout_height="45dp">
             <ImageView
-                android:src="@drawable/old_grey"
+                android:src="@drawable/ic_controbutes"
                 android:layout_width="match_parent"
+                android:layout_margin="10dp"
                 android:layout_height="match_parent" />
         </androidx.cardview.widget.CardView>
         <LinearLayout
@@ -129,12 +135,14 @@
             android:layout_width="45dp"
             android:layout_gravity="start|center"
             app:cardCornerRadius="70dp"
+            app:cardBackgroundColor="@color/nextos_icon_background"
+            app:cardElevation="0dp"
             android:layout_marginStart="@dimen/card_margin"
             android:layout_height="45dp">
             <ImageView
-                android:src="@drawable/sponsers_logo"
+                android:src="@drawable/ic_star_members"
                 android:layout_width="match_parent"
-                android:scaleType="centerCrop"
+                android:layout_margin="10dp"
                 android:layout_height="match_parent" />
         </androidx.cardview.widget.CardView>
         <LinearLayout
@@ -164,6 +172,14 @@
             android:layout_height="30dp"
             android:src="@drawable/arrow_icon"/>
     </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/OfficialSupport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
     <TextView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
@@ -173,7 +189,7 @@
         android:text="@string/support"
         android:textSize="12dp"
         android:fontFamily="@font/poppinslight"
-        android:id="@android:id/title"
+
         android:layout_height="wrap_content"/>
     <androidx.cardview.widget.CardView
         android:id="@+id/support_g"
@@ -192,11 +208,14 @@
             android:layout_width="45dp"
             android:layout_gravity="start|center"
             app:cardCornerRadius="70dp"
+            app:cardBackgroundColor="@color/nextos_icon_background"
+            app:cardElevation="0dp"
             android:layout_marginStart="@dimen/card_margin"
             android:layout_height="45dp">
             <ImageView
-                android:src="@drawable/community_logo"
+                android:src="@drawable/ic_support"
                 android:layout_width="match_parent"
+                android:layout_margin="10dp"
                 android:layout_height="match_parent" />
         </androidx.cardview.widget.CardView>
         <LinearLayout
@@ -206,6 +225,7 @@
             android:layout_width="250dp"
             android:layout_height="45dp">
             <TextView
+                android:id="@+id/supportGroupName"
                 android:text="@string/support_name_xd"
                 android:textSize="18sp"
                 android:fontFamily="@font/poppinsregular"
@@ -243,11 +263,14 @@
             android:layout_width="45dp"
             android:layout_gravity="start|center"
             app:cardCornerRadius="70dp"
+            app:cardBackgroundColor="@color/nextos_icon_background"
+            app:cardElevation="0dp"
             android:layout_marginStart="@dimen/card_margin"
             android:layout_height="45dp">
             <ImageView
-                android:src="@drawable/github_mark_white"
+                android:src="@drawable/ic_details"
                 android:layout_width="match_parent"
+                android:layout_margin="10dp"
                 android:layout_height="match_parent" />
         </androidx.cardview.widget.CardView>
         <LinearLayout
@@ -257,7 +280,7 @@
             android:layout_width="250dp"
             android:layout_height="45dp">
             <TextView
-                android:text="GITHUB POST"
+                android:text="ROM RELEASE POST"
                 android:textSize="18sp"
                 android:fontFamily="@font/poppinsregular"
                 android:layout_width="wrap_content"
@@ -277,6 +300,8 @@
             android:layout_height="30dp"
             android:src="@drawable/arrow_icon"/>
     </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
 
 
 
