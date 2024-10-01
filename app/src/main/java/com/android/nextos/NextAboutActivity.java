@@ -67,7 +67,7 @@ public class NextAboutActivity extends AppCompatActivity implements View.OnClick
 
     // Check if the build is official by comparing the codename to the supported list
     private void updateBuildType() {
-        String deviceCodename = getPropValue("ro.product.vendor.name");
+        String deviceCodename = getPropValue("ro.product.device");
         String[] supportedDevices = getResources().getStringArray(R.array.official_supported_devices);
 
         IS_OFFICIAL = false;
