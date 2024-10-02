@@ -18,11 +18,14 @@
                 <item>spes</item>
                 <item>spesn</item>
                 <item>excalibur</item>
-                <item>miatoll</item>
                 <item>curtana</item>
                 <item>joyeuse</item>
+                <item>gram</item>
                 <item>alioth</item>
+                <item>aliothin</item>
                 <item>fog</item>
+                <item>rain</item>
+                <item>wind</item>
         </string-array>
 
 </resources>
