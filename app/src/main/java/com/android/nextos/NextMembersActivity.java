@@ -49,7 +49,7 @@ public class NextMembersActivity extends AppCompatActivity {
         userModelArrayList.add(new UserModel("FAZO KHAN", "https://raw.githubusercontent.com/Fazokhan/NEXTOS_PROJECT/main/database/assets/members/fazokhan.jpg", "Owner and Senior", "https://t.me/Fazokhan"));
         userModelArrayList.add(new UserModel("SIAM (NIBBA)", "https://raw.githubusercontent.com/Fazokhan/NEXTOS_PROJECT/main/database/assets/members/siam.jpg", "Pro Porter and Helper", "https://t.me/NebbaGiveUp"));
         userModelArrayList.add(new UserModel("GUFFY", "https://raw.githubusercontent.com/Fazokhan/NEXTOS_PROJECT/main/database/assets/members/guffy.jpg", "Alioth Dev", "https://t.me/GUFFYWa"));
-        userModelArrayList.add(new UserModel("ISHAN DEV", "https://raw.githubusercontent.com/Fazokhan/NEXTOS_PROJECT/main/database/assets/members/ishan.jpg", "Remix Dev", "https://t.me/krishna_prem_is_lob"));
+        userModelArrayList.add(new UserModel("ISHAN DEV", "https://raw.githubusercontent.com/Fazokhan/NEXTOS_PROJECT/main/database/assets/members/ishan.jpg", "Fog Maintainer", "https://t.me/MeIzIshanDev"));
         userModelArrayList.add(new UserModel("OBITO XD", "https://raw.githubusercontent.com/Fazokhan/NEXTOS_PROJECT/main/database/assets/members/obito.jpg", "A Human Being", "https://t.me/darksky4you"));
 
 
