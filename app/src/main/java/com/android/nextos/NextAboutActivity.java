@@ -146,7 +146,7 @@ public class NextAboutActivity extends AppCompatActivity implements View.OnClick
         } else if (viewId == R.id.support_g) {
             openLink(CommunityLink + mSuUserName);
         } else if (viewId == R.id.git_post) {
-            openLink(getString(R.string.project_details_link_xd) + NEXTOS_CODENAME);
+            openLink(getString(R.string.project_details_link_xd));
         }
     }
 
